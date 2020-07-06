@@ -1,0 +1,11 @@
+---
+- name: Archlinux | Install require packages.
+  expect:
+    command: yay -S {{ global_menu_packages }}
+    responses:
+      (?i)install: "y"
+  run_once: true
+
+- name: Archlinux | Configure.
+  command: "{{ item }}"
+  with_items: "{{ xfconf_commands }}"

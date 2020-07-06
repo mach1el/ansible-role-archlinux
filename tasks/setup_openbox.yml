@@ -1,0 +1,9 @@
+---
+- name: Archlinux | Install core packages.
+  become: true
+  command: pacman -S {{ item }} --asdeps --noconfirm
+  with_items: "{{ openbox_pacman_packages }}"
+
+- name: Archlinux | Install extract packages.
+  command: yay -S {{ item }} --noconfirm
+  with_items: "{{ openbox_yay_packages }}"

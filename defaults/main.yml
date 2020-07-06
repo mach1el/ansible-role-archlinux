@@ -1,0 +1,75 @@
+---
+tmp_dir: "/tmp"
+
+install_openbox: false
+install_global_menu: false
+
+yay_repo: "https://aur.archlinux.org/yay.git"
+yay_work_dir: "{{ tmp_dir }}/yay"
+
+fonts_dir: "/usr/share/fonts"
+fonts_repo: "https://github.com/t7hm1/Fonts.git"
+
+mojave_theme_dir: "Mojave-gtk-theme"
+mojave_icons_theme_dir: "McMojave-circle"
+mojave_theme_tmp_dir: "{{ tmp_dir }}/{{ mojave_theme_dir }}"
+mojave_icons_tmp_dir: "{{ tmp_dir }}/{{ mojave_icons_theme_dir }}"
+
+xfconf_commands:
+  - xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
+  - xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
+
+global_menu_packages:
+  - libdbusmenu-glib
+  - libdbusmenu-gtk3
+  - libdbusmenu-gtk2
+  - appmenu-gtk-module-git
+  - vala-panel-appmenu-xfce-git
+  - vala-panel-appmenu-registrar-git
+
+openbox_yay_packages:
+  - polybar
+  - cava
+  - arc-icon-theme-git
+  - brightnessctl
+  - openbox-arc-git
+  - obmenu-generator
+
+openbox_pacman_packages:
+  - plank
+  - compton
+  - dunst
+  - lxappearance-obconf
+  - menumaker
+  - obconf
+  - obconf-qt
+  - oblogout
+  - openbox
+  - rofi
+  - wireless_tools
+  - mpd
+  - network-manager-applet
+  - xscreensaver
+  - xfce4-screensaver
+  - xfce4-powermanager
+
+font_packages:
+  - ttf-mac-fonts
+  - otf-san-francisco
+  - otf-hermit
+  - otf-font-awesome-4
+  - otf-font-awesome-4
+  - terminess-powerline-font-git
+  - terminus-font-ttf
+  - ttf-font-awesome-4
+  - noto-fonts
+  - noto-fonts-cjk
+  - noto-fonts-emoji
+  - noto-fonts-extra
+  - otf-fira-sans
+  - otf-fira-mono
+  - otf-font-awesome 
+  - powerline-fonts 
+  - powerline 
+  - powerline-fonts 
+  - python-powerline
