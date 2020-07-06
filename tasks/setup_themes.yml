@@ -1,0 +1,30 @@
+---
+- name: Archlinux | Install requirements.
+  become: true
+  pacman:
+    update_cache: yes
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ themes_require_packages }}"
+
+- name: Archlinux | Install from AUR.
+  command: yay -S {{ item }} --asdeps --noconfirm
+  with_items: "{{ themes_from_aur }}"
+
+- name: Archlinux | Clone from github repo.
+  git:
+    repo: "{{ item }}"
+    dest: "{{ tmp_dir }}"
+  with_items: "{{ themes_repo }}"
+
+- name: Archlinux | Install theme from git repo.
+  become: true
+  shell: ./install.sh -a
+  args:
+    chdir: "{{ mojave_theme_tmp_dir }}"
+
+- name: Archlinux | Install icons theme from git repo.
+  become: true
+  shell: ./install.sh -a
+  args:
+    chdir: "{{ mojave_icons_tmp_dir }}"
