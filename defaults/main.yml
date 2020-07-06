@@ -15,6 +15,20 @@ mojave_icons_theme_dir: "McMojave-circle"
 mojave_theme_tmp_dir: "{{ tmp_dir }}/{{ mojave_theme_dir }}"
 mojave_icons_tmp_dir: "{{ tmp_dir }}/{{ mojave_icons_theme_dir }}"
 
+themes_repo:
+  - https://github.com/vinceliuice/McMojave-circle.git
+  - https://github.com/vinceliuice/Mojave-gtk-theme.git
+
+themes_require_packages:
+  - gtk-engine-murrine 
+  - gtk-engines 
+  - sassc
+
+themes_from_aur:
+  - la-capitaine-icon-theme 
+  - osx-el-capitan-theme-git 
+  - capitaine-cursors
+
 xfconf_commands:
   - xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
   - xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
