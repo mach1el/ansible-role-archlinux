@@ -11,6 +11,7 @@ Auto building,config my arch linux
 	│   ├── setup_fonts.yml
 	│   ├── setup_globalmenu.yml
 	│   ├── setup_openbox.yml
+	│   ├── setup_themes.yml
 	│   └── setup_yay.yml
 	└── templates
 
