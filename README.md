@@ -1,7 +1,5 @@
 # ansible-role-archlinux
-![Version](https://img.shields.io/github/v/release/mach1el/ansible-role-archlinux
-?color=brown&style=plastic) ![License](https://img.shields.io/github/license/mach1el/ansible-role-archlinux
-?color=purple&style=plastic)
+![Version](https://img.shields.io/github/v/release/mach1el/ansible-role-archlinux?color=brown&style=plastic) ![License](https://img.shields.io/github/license/mach1el/ansible-role-archlinux?color=purple&style=plastic)
 Auto building,config my arch linux
 
 ## Role pathes
