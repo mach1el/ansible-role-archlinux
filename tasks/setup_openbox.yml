@@ -1,7 +1,10 @@
 ---
 - name: Archlinux | Install core packages.
   become: true
-  command: pacman -S {{ item }} --asdeps --noconfirm
+  pacman:
+    update_cache: yes
+    name: "{{ item }}"
+    state: present
   with_items: "{{ openbox_pacman_packages }}"
 
 - name: Archlinux | Install extract packages.
