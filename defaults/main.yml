@@ -1,8 +1,8 @@
 ---
 tmp_dir: "/tmp"
 
-install_yay: false
-install_fonts: false
+install_yay: true
+install_fonts: true
 install_openbox: true
 install_global_menu: true
 
@@ -66,9 +66,11 @@ openbox_pacman_packages:
   - mpd
   - network-manager-applet
   - xscreensaver
+  - xfce4-terminal
   - xfce4-screensaver
   - xfce4-power-manager
   - xfce4-screenshooter
+  - xfce4-whiskermenu-plugin
 
 font_packages:
   - ttf-mac-fonts
@@ -90,3 +92,93 @@ font_packages:
   - powerline 
   - powerline-fonts 
   - python-powerline
+
+core_packages:
+  - albert
+  - tree
+  - htop
+  - git
+  - curl
+  - wget
+  - zsh
+  - neofetch
+  - nodejs
+  - lolcat
+  - net-tools
+  - lighdm
+  - lightdm-webkit2-greeter
+  - powertop
+  - tlp
+  - udisks2
+  - udisks2-qt
+  - gst-plugins-bad
+  - gst-plugins-bad-libs
+  - gst-plugins-base
+  - gst-plugins-base-libs
+  - gst-plugins-good
+  - mvp
+  - parole
+  - rhythmbox
+  - compton
+  - qt5
+  - qt5ct
+  - qt5-base
+  - kdenlive
+  - breezee
+  - gimp
+  - firefox
+  - chromium
+  - firefox-developer-edition
+  - openvpn
+  - bash-completion
+  - nfts-3g
+  - thunar
+  - thunar-archive-plugin
+  - thunar-media-tags-plugin
+  - thunar-volman
+  - docker
+  - docker-compose
+  - steam
+  - steam-native-runtime
+  - gst-libav
+  - x265
+  - x264
+  - xorg
+  - xorg-xinit
+  - xorg-apps
+  - xorg-server
+  - mesa
+  - lib32-mesa
+  - vulkan-intel
+  - xf86-input-synaptics
+  - xf86-input-libinput
+  - libinput
+  - xrandr
+  - gparted
+  - gedit
+  - evince
+  - eog
+  - dconf-editor
+  - python-pip
+  - python2-pip
+  - file-roller
+  - unzip
+  - unrar
+  - feh
+  - brightnessctl
+  - pavucontrol
+  - pulseaudio
+  - pulseaudio-alsa
+  - pulseaudio-equalizer
+  - pulseaudio-jack
+  - alsa-plugins
+  - alsa-utils
+  - transmission-qt
+  - mlocate
+  - cmake
+  - ibus-unikey
+  - intel-ucode
+  - xdg-user-dirs
+  - xterm
+  - wpa_supplicant
+  - powerline

@@ -1,4 +1,11 @@
 ---
+- name: Archlinux | Install core packages.
+  become: true
+  pacman:
+    update_cache: yes
+    name: "{{ core_packages }}"
+    state: latest
+
 - include_tasks: setup_yay.yml
   when: install_yay
   
