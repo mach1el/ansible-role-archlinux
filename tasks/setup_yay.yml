@@ -5,6 +5,6 @@
     chdir: "{{ tmp_dir }}"
 
 - name: Archlinux | Install yay.
-  command: makepkg -sci
+  command: makepkg -sci --noconfirm
   args:
     chdir: "{{ yay_work_dir }}"

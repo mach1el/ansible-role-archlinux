@@ -5,6 +5,7 @@
     update_cache: yes
     name: "{{ core_packages }}"
     state: latest
+  when: install_core_packages
 
 - include_tasks: setup_yay.yml
   when: install_yay
@@ -13,6 +14,7 @@
   when: install_fonts
 
 - include_tasks: setup_themes.yml
+  when: install_theme
 
 - include_tasks: setup_openbox.yml
   when: install_openbox

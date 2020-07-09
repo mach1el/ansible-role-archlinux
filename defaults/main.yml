@@ -1,10 +1,12 @@
 ---
 tmp_dir: "/tmp"
 
-install_yay: true
-install_fonts: true
-install_openbox: true
+install_yay: false
+install_fonts: false
+install_theme: false
+install_openbox: false
 install_global_menu: true
+install_core_packages: false
 
 yay_repo: "https://aur.archlinux.org/yay.git"
 yay_work_dir: "{{ tmp_dir }}/yay"
@@ -35,10 +37,12 @@ xfconf_commands:
   - xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
   - xfconf-query -c xsettings -p /Gtk/ShellShowsAppmenu -n -t bool -s true
 
-global_menu_packages:
+global_menu_pacman:
   - libdbusmenu-glib
   - libdbusmenu-gtk3
   - libdbusmenu-gtk2
+
+global_menu_aur:
   - appmenu-gtk-module-git
   - vala-panel-appmenu-xfce-git
   - vala-panel-appmenu-registrar-git
@@ -50,6 +54,7 @@ openbox_yay_packages:
   - brightnessctl
   - openbox-arc-git
   - obmenu-generator
+  - oblogout
 
 openbox_pacman_packages:
   - plank
@@ -59,7 +64,6 @@ openbox_pacman_packages:
   - menumaker
   - obconf
   - obconf-qt
-  - oblogout
   - openbox
   - rofi
   - wireless_tools
@@ -77,8 +81,6 @@ font_packages:
   - otf-san-francisco
   - otf-hermit
   - otf-font-awesome-4
-  - otf-font-awesome-4
-  - terminess-powerline-font-git
   - terminus-font-ttf
   - ttf-font-awesome-4
   - noto-fonts
@@ -105,18 +107,17 @@ core_packages:
   - nodejs
   - lolcat
   - net-tools
-  - lighdm
+  - lightdm
   - lightdm-webkit2-greeter
   - powertop
   - tlp
   - udisks2
-  - udisks2-qt
   - gst-plugins-bad
   - gst-plugins-bad-libs
   - gst-plugins-base
   - gst-plugins-base-libs
   - gst-plugins-good
-  - mvp
+  - mpv
   - parole
   - rhythmbox
   - compton
@@ -124,14 +125,14 @@ core_packages:
   - qt5ct
   - qt5-base
   - kdenlive
-  - breezee
+  - breeze
   - gimp
   - firefox
   - chromium
   - firefox-developer-edition
   - openvpn
   - bash-completion
-  - nfts-3g
+  - ntfs-3g
   - thunar
   - thunar-archive-plugin
   - thunar-media-tags-plugin
@@ -153,7 +154,6 @@ core_packages:
   - xf86-input-synaptics
   - xf86-input-libinput
   - libinput
-  - xrandr
   - gparted
   - gedit
   - evince

@@ -7,7 +7,7 @@
     state: present
 
 - name: Archlinux | Install from AUR.
-  command: yay -S {{ item }} --asdeps --noconfirm
+  command: yay -S {{ item }}  --noconfirm
   with_items: "{{ themes_from_aur }}"
 
 - name: Archlinux | Clone from github repo.

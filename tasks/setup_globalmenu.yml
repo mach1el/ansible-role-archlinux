@@ -1,10 +1,16 @@
 ---
-- name: Archlinux | Install require packages.
-  expect:
-    command: yay -S {{ global_menu_packages }}
-    responses:
-      (?i)install: "y"
-  run_once: true
+- name: Archlinux | Install pxpect
+  pip:
+    name: pexpect
+
+- name: Archlinux | Install from pacman
+  become: true
+  pacman:
+    name: "{{ global_menu_pacman }}"
+  state: latest
+
+- name: Archlinux | Install from AUR
+  shell: yes | yay -S {{ global_menu_aur }}
 
 - name: Archlinux | Configure.
   command: "{{ item }}"
