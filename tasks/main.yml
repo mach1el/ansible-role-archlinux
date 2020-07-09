@@ -1,6 +1,10 @@
 ---
 - include_tasks: setup_yay.yml
+  when: install_yay
+  
 - include_tasks: setup_fonts.yml
+  when: install_fonts
+
 - include_tasks: setup_themes.yml
 
 - include_tasks: setup_openbox.yml

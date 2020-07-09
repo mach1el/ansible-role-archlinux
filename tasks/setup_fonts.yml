@@ -1,14 +1,14 @@
 ---
 - name: Archlinux | Install fonts packages.
-  shell: yay -S {{ item }} --noconfirm
+  command: yay -S {{ item }} --noconfirm
   with_items: "{{ font_packages }}"
 
 - name: Archlinux | Clone custom fonts repo.
   become: true
-  shell: git clone {{ fonts_repo }}
+  command: git clone {{ fonts_repo }}
   args:
     chdir: "{{ fonts_dir }}"
 
 - name: Archlinux | Update fonts cache.
   become: true
-  shell: fc-cache -fv
+  command: fc-cache -fv

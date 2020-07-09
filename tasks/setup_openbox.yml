@@ -3,9 +3,8 @@
   become: true
   pacman:
     update_cache: yes
-    name: "{{ item }}"
+    name: "{{ openbox_pacman_packages }}"
     state: present
-  with_items: "{{ openbox_pacman_packages }}"
 
 - name: Archlinux | Install extract packages.
   command: yay -S {{ item }} --noconfirm
