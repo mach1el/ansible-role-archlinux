@@ -1,8 +1,10 @@
 ---
 tmp_dir: "/tmp"
 
-install_openbox: false
-install_global_menu: false
+install_yay: false
+install_fonts: false
+install_openbox: true
+install_global_menu: true
 
 yay_repo: "https://aur.archlinux.org/yay.git"
 yay_work_dir: "{{ tmp_dir }}/yay"
@@ -65,7 +67,8 @@ openbox_pacman_packages:
   - network-manager-applet
   - xscreensaver
   - xfce4-screensaver
-  - xfce4-powermanager
+  - xfce4-power-manager
+  - xfce4-screenshooter
 
 font_packages:
   - ttf-mac-fonts
