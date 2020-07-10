@@ -1,27 +1,36 @@
 ---
 tmp_dir: "/tmp"
 
-install_yay: false
-install_fonts: false
-install_theme: false
-install_openbox: false
+install_yay: true
+install_fonts: true
+install_theme: true
+install_openbox: true
 install_global_menu: true
-install_core_packages: false
+install_core_packages: true
+
+dotfiles_path: "{{ tmp_dir }}/dotfiles"
+
+backlight_path: "{{ tmp_dir }}/backlight"
 
 yay_repo: "https://aur.archlinux.org/yay.git"
 yay_work_dir: "{{ tmp_dir }}/yay"
 
 fonts_dir: "/usr/share/fonts"
-fonts_repo: "https://github.com/t7hm1/Fonts.git"
+fonts_repo: "https://github.com/mach1el/Fonts.git"
 
-mojave_theme_dir: "Mojave-gtk-theme"
-mojave_icons_theme_dir: "McMojave-circle"
-mojave_theme_tmp_dir: "{{ tmp_dir }}/{{ mojave_theme_dir }}"
-mojave_icons_tmp_dir: "{{ tmp_dir }}/{{ mojave_icons_theme_dir }}"
+themes_path: "/usr/share/themes"
+
+openbox_themes_path: "{{ tmp_dir }}/openbox-theme-collections"
+gtk_themes_collection: "{{ tmp_dir }}/gtk-theme-collections"
+
+mojave_theme_tmp_dir: "{{ tmp_dir }}/Mojave-gtk-theme"
+mojave_icons_tmp_dir: "{{ tmp_dir }}/McMojave-circle"
 
 themes_repo:
   - https://github.com/vinceliuice/McMojave-circle.git
   - https://github.com/vinceliuice/Mojave-gtk-theme.git
+  - https://github.com/mach1el/openbox-theme-collections.git
+  - https://github.com/mach1el/gtk-theme-collections.git
 
 themes_require_packages:
   - gtk-engine-murrine 
@@ -55,12 +64,13 @@ openbox_yay_packages:
   - openbox-arc-git
   - obmenu-generator
   - oblogout
+  - sublime-text-dev
 
 openbox_pacman_packages:
   - plank
   - compton
   - dunst
-  - lxappearance-obconf
+  - lxappearance
   - menumaker
   - obconf
   - obconf-qt
@@ -74,15 +84,19 @@ openbox_pacman_packages:
   - xfce4-screensaver
   - xfce4-power-manager
   - xfce4-screenshooter
+  - xfce4-pulseaudio-plugin
   - xfce4-whiskermenu-plugin
 
 font_packages:
+  - ttf-dejavu
+  - ttf-anonymous-pro
   - ttf-mac-fonts
   - otf-san-francisco
   - otf-hermit
   - otf-font-awesome-4
   - terminus-font-ttf
   - ttf-font-awesome-4
+  - ttf-fira-code
   - noto-fonts
   - noto-fonts-cjk
   - noto-fonts-emoji
@@ -106,17 +120,26 @@ core_packages:
   - neofetch
   - nodejs
   - lolcat
+  - acpi
   - net-tools
   - lightdm
   - lightdm-webkit2-greeter
   - powertop
   - tlp
+  - gvfs
+  - gvfs-afc
+  - gvfs-smb
+  - gvfs-gphoto2
+  - gvfs-mtp
+  - gvfs-nfs
+  - gvfs-google
   - udisks2
   - gst-plugins-bad
   - gst-plugins-bad-libs
   - gst-plugins-base
   - gst-plugins-base-libs
   - gst-plugins-good
+  - audacity
   - mpv
   - parole
   - rhythmbox
@@ -180,5 +203,5 @@ core_packages:
   - intel-ucode
   - xdg-user-dirs
   - xterm
-  - wpa_supplicant
   - powerline
+  - libreoffice-fresh
