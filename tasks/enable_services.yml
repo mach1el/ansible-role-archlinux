@@ -1,0 +1,8 @@
+---
+- name: Archlinux | Enable TLP.
+  become: true
+  service: name=tlp enabled=yes
+
+- name: Archlinux | Enable Lightdm.
+  become: true
+  service: name=lightdm enabled=yes
