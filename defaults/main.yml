@@ -205,3 +205,6 @@ core_packages:
   - xterm
   - libreoffice-fresh
   - ffmpegthumbnailer
+  - tumbler
+  - libgsf
+  - libopenraw
