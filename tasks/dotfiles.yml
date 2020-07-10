@@ -1,0 +1,16 @@
+---
+- name: Archlinux | ensure if dotfiles exists.
+  stat:
+    path: "{{ dotfiles_path }}"
+  register: dotfiles_check
+
+- name: Archlinux | clone dotfiles.
+  git:
+    repo: 'https://github.com/mach1el/dotfiles.git'
+    dest: "{{ dotfiles_path }}"
+  when: dotfiles_check.stat.exists == false
+
+- name: Archlinux | copy dotfiles.
+  shell: cp -r .* ~
+  args:
+    chdir: "{{ dotfiles_path }}"
