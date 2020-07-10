@@ -1,12 +1,12 @@
 ---
-- name: Archlinux | Install requirements.
+- name: Archlinux | Install theme requirements.
   become: true
   pacman:
     update_cache: yes
     name: "{{ themes_require_packages }}"
     state: present
 
-- name: Archlinux | Install from AUR.
+- name: Archlinux | Install themes from AUR.
   command: yay -S {{ item }}  --noconfirm
   with_items: "{{ themes_from_aur }}"
 
@@ -16,14 +16,26 @@
     chdir: "{{ tmp_dir }}"
   with_items: "{{ themes_repo }}"
 
-- name: Archlinux | Install theme from git repo.
+- name: Archlinux | Install Mojave theme from git repo.
   become: true
   command: ./install.sh -a
   args:
     chdir: "{{ mojave_theme_tmp_dir }}"
 
-- name: Archlinux | Install icons theme from git repo.
+- name: Archlinux | Install Mojave icons theme from git repo.
   become: true
   command: ./install.sh -a
   args:
     chdir: "{{ mojave_icons_tmp_dir }}"
+
+- name: Archlinux | Install openbox themes.
+  become: true
+  shell: cp -r * {{ themes_path }}
+  args:
+    chdir: "{{ openbox_themes_path }}"
+
+- name: Archlinux | Install gtk collection themes.
+  become: true
+  shell: cp -r * {{ themes_path }}
+  args:
+    chdir: "{{ gtk_themes_collection }}"

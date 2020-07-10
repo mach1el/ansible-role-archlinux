@@ -1,17 +1,17 @@
 ---
-- name: Archlinux | Install pxpect
-  pip:
-    name: pexpect
-
-- name: Archlinux | Install from pacman
+- name: Archlinux | Install global menu packages from pacman.
   become: true
   pacman:
     name: "{{ global_menu_pacman }}"
-  state: latest
+    state: latest
 
-- name: Archlinux | Install from AUR
-  shell: yes | yay -S {{ global_menu_aur }}
+- name: Archlinux | Install global menu packages from AUR.
+  command: yay -S {{ item }} --noconfirm
+  with_items: "{{ global_menu_aur }}"
 
-- name: Archlinux | Configure.
+- name: Archlinux | Global menu configure.
   command: "{{ item }}"
   with_items: "{{ xfconf_commands }}"
+
+- name: Archlinux | Remove unused dependencies.
+  command: yay -Yc --noconfirm

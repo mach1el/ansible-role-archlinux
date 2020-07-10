@@ -1,11 +1,11 @@
 ---
-- name: Archlinux | Install core packages.
+- name: Archlinux | Install openbox core packages.
   become: true
   pacman:
     update_cache: yes
     name: "{{ openbox_pacman_packages }}"
     state: present
 
-- name: Archlinux | Install extract packages.
+- name: Archlinux | Install openbox extract packages.
   command: yay -S {{ item }} --noconfirm
   with_items: "{{ openbox_yay_packages }}"
