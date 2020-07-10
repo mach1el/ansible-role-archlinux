@@ -1,0 +1,18 @@
+---
+- name: Archlinux | Ensure if backlight exist.
+  stat:
+    path: '{{ backlight_path }}'
+  register: backlight_check
+
+- name: Archlinux | clone backlight repo.
+  git:
+    repo: 'https://github.com/baskerville/backlight.git'
+    dest: '{{ backlight_path }}'
+  when: backlight_check.stat.exists == false 
+
+- name: Archlinux | install backlight.
+  become: true
+  shell: make && make install
+  args:
+    chdir: "{{ backlight_path }}"
+  when: backlight_check.stat.exists
