@@ -203,5 +203,5 @@ core_packages:
   - intel-ucode
   - xdg-user-dirs
   - xterm
-  - powerline
   - libreoffice-fresh
+  - ffmpegthumbnailer
