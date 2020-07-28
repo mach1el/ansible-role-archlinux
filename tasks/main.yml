@@ -15,9 +15,9 @@
 
 - include_tasks: setup_themes.yml
   when: install_theme
-
-- include_tasks: setup_openbox.yml
-  when: install_openbox
+  
+- include_tasks: setup_xfce.yml
+  when: install_xfce
 
 - include_tasks: setup_globalmenu.yml
   when: install_global_menu

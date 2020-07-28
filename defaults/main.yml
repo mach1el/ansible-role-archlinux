@@ -4,7 +4,7 @@ tmp_dir: "/tmp"
 install_yay: true
 install_fonts: true
 install_theme: true
-install_openbox: true
+install_xfce: true
 install_global_menu: true
 install_core_packages: true
 
@@ -32,6 +32,14 @@ themes_repo:
   - https://github.com/mach1el/openbox-theme-collections.git
   - https://github.com/mach1el/gtk-theme-collections.git
 
+xfce_packages:
+  - xfce4
+  - xfce4-goodies
+  - pasystray
+  - xfce4-pulseaudio-plugin
+  - libcanberra
+  - libcanberra-pulse 
+
 themes_require_packages:
   - gtk-engine-murrine 
   - gtk-engines 
@@ -56,38 +64,8 @@ global_menu_aur:
   - vala-panel-appmenu-xfce-git
   - vala-panel-appmenu-registrar-git
 
-openbox_yay_packages:
-  - polybar
-  - cava
-  - arc-icon-theme-git
-  - brightnessctl
-  - openbox-arc-git
-  - obmenu-generator
-  - oblogout
-  - sublime-text-dev
-
-openbox_pacman_packages:
-  - plank
-  - compton
-  - dunst
-  - lxappearance
-  - menumaker
-  - obconf
-  - obconf-qt
-  - openbox
-  - rofi
-  - wireless_tools
-  - mpd
-  - network-manager-applet
-  - xscreensaver
-  - xfce4-terminal
-  - xfce4-screensaver
-  - xfce4-power-manager
-  - xfce4-screenshooter
-  - xfce4-pulseaudio-plugin
-  - xfce4-whiskermenu-plugin
-
 font_packages:
+  - ttf-droid
   - ttf-dejavu
   - ttf-anonymous-pro
   - ttf-mac-fonts
@@ -194,8 +172,6 @@ core_packages:
   - pulseaudio-alsa
   - pulseaudio-equalizer
   - pulseaudio-jack
-  - alsa-plugins
-  - alsa-utils
   - transmission-qt
   - mlocate
   - cmake
@@ -205,3 +181,11 @@ core_packages:
   - xterm
   - powerline
   - libreoffice-fresh
+  - alsa-plugins
+  - alsa-utils
+  - alsa-tools
+  - libsamplerate
+  - ladspa
+  - swh-plugins
+  - alsa-lib
+  - alsa-firmware
