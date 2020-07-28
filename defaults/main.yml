@@ -194,8 +194,6 @@ core_packages:
   - pulseaudio-alsa
   - pulseaudio-equalizer
   - pulseaudio-jack
-  - alsa-plugins
-  - alsa-utils
   - transmission-qt
   - mlocate
   - cmake
@@ -205,3 +203,11 @@ core_packages:
   - xterm
   - powerline
   - libreoffice-fresh
+  - alsa-plugins
+  - alsa-utils
+  - alsa-tools
+  - libsamplerate
+  - ladspa
+  - swh-plugins
+  - alsa-lib
+  - alsa-firmware
