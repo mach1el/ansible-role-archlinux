@@ -38,6 +38,7 @@ xfce_packages:
   - libcanberra
   - libcanberra-pulse
   - network-manager-applet
+  - xdg-user-dirs-gtk
 
 themes_require_packages:
   - gtk-engine-murrine 
