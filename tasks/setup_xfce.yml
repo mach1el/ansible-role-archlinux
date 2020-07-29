@@ -3,5 +3,5 @@
   become: true
   pacman:
     update_cache: yes
-    name: "{{ openbox_pacman_packages }}"
+    name: "{{ xfce_packages }}"
     state: present

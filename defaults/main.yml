@@ -35,8 +35,6 @@ themes_repo:
 xfce_packages:
   - xfce4
   - xfce4-goodies
-  - pasystray
-  - xfce4-pulseaudio-plugin
   - libcanberra
   - libcanberra-pulse 
 
@@ -135,6 +133,8 @@ core_packages:
   - bash-completion
   - ntfs-3g
   - thunar
+  - tumbler
+  - raw-thumbnailer
   - thunar-archive-plugin
   - thunar-media-tags-plugin
   - thunar-volman
