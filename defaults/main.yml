@@ -111,6 +111,7 @@ core_packages:
   - gvfs-nfs
   - gvfs-google
   - udisks2
+  - gst-libav
   - gst-plugins-bad
   - gst-plugins-bad-libs
   - gst-plugins-base
@@ -143,7 +144,6 @@ core_packages:
   - docker-compose
   - steam
   - steam-native-runtime
-  - gst-libav
   - x265
   - x264
   - xorg
@@ -151,7 +151,7 @@ core_packages:
   - xorg-apps
   - xorg-server
   - mesa
-  - lib32-mesa
+  - lib32-vulkan-intel
   - vulkan-intel
   - xf86-input-synaptics
   - xf86-input-libinput
@@ -177,7 +177,6 @@ core_packages:
   - mlocate
   - cmake
   - ibus-unikey
-  - intel-ucode
   - xdg-user-dirs
   - xterm
   - powerline
