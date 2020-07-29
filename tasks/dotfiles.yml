@@ -10,7 +10,12 @@
     dest: "{{ dotfiles_path }}"
   when: dotfiles_check.stat.exists == false
 
+- name: Archlinux | Remove git dir.
+  file:
+    path: "{{ dotfiles_path }}/.git"
+    state: absent
+
 - name: Archlinux | copy dotfiles.
-  shell: cp -r .* ~
+  shell: cp -r dotfiles_path/.* ~
   args:
-    chdir: "{{ dotfiles_path }}"
+    chdir: "{{ tmp_path }}"
