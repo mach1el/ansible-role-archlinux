@@ -200,7 +200,6 @@ core_packages:
   - mlocate
   - cmake
   - ibus-unikey
-  - intel-ucode
   - xdg-user-dirs
   - xterm
   - powerline
