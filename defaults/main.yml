@@ -157,6 +157,8 @@ core_packages:
   - bash-completion
   - ntfs-3g
   - thunar
+  - tumbler
+  - raw-thumbnailer
   - thunar-archive-plugin
   - thunar-media-tags-plugin
   - thunar-volman
