@@ -86,6 +86,7 @@ openbox_pacman_packages:
   - xfce4-screenshooter
   - xfce4-pulseaudio-plugin
   - xfce4-whiskermenu-plugin
+  - xdg-user-dirs-gtk
 
 font_packages:
   - ttf-dejavu
