@@ -183,7 +183,3 @@ core_packages:
   - powerline
   - libreoffice-fresh
   - alsa-utils
-  - alsa-tools
-  - libsamplerate
-  - ladspa
-  - swh-plugins
