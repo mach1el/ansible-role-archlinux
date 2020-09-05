@@ -63,6 +63,8 @@ global_menu_pacman:
   - libdbusmenu-gtk2
 
 global_menu_aur:
+  - sublime-text-dev
+  - panther-launcher-git
   - appmenu-gtk-module-git
   - vala-panel-appmenu-xfce-git
   - vala-panel-appmenu-registrar-git
