@@ -45,6 +45,8 @@ themes_require_packages:
   - gtk-engine-murrine 
   - gtk-engines 
   - sassc
+  - optipng 
+  - inkscape
 
 themes_from_aur:
   - la-capitaine-icon-theme 
@@ -89,6 +91,7 @@ font_packages:
   - python-powerline
 
 core_packages:
+  - nautilus
   - albert
   - tree
   - htop
