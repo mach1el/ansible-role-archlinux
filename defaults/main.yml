@@ -23,12 +23,12 @@ themes_path: "/usr/share/themes"
 openbox_themes_path: "{{ tmp_dir }}/openbox-theme-collections"
 gtk_themes_collection: "{{ tmp_dir }}/gtk-theme-collections"
 
-mojave_theme_tmp_dir: "{{ tmp_dir }}/Mojave-gtk-theme"
+mojave_theme_tmp_dir: "{{ tmp_dir }}/WhiteSur-gtk-theme"
 mojave_icons_tmp_dir: "{{ tmp_dir }}/McMojave-circle"
 
 themes_repo:
   - https://github.com/vinceliuice/McMojave-circle.git
-  - https://github.com/vinceliuice/Mojave-gtk-theme.git
+  - https://github.com/vinceliuice/WhiteSur-gtk-theme.git
   - https://github.com/mach1el/openbox-theme-collections.git
   - https://github.com/mach1el/gtk-theme-collections.git
 
