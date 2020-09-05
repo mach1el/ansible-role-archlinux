@@ -65,6 +65,7 @@ openbox_yay_packages:
   - obmenu-generator
   - oblogout
   - sublime-text-dev
+  - panther-launcher-git
 
 openbox_pacman_packages:
   - plank
