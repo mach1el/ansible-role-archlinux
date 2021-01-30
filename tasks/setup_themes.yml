@@ -16,18 +16,6 @@
     chdir: "{{ tmp_dir }}"
   with_items: "{{ themes_repo }}"
 
-- name: Archlinux | Install Mojave theme from git repo.
-  become: true
-  command: ./install.sh -a
-  args:
-    chdir: "{{ mojave_theme_tmp_dir }}"
-
-- name: Archlinux | Install Mojave icons theme from git repo.
-  become: true
-  command: ./install.sh -a
-  args:
-    chdir: "{{ mojave_icons_tmp_dir }}"
-
 - name: Archlinux | Install openbox themes.
   become: true
   shell: cp -r * {{ themes_path }}
