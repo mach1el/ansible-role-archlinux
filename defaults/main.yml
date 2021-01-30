@@ -38,6 +38,9 @@ themes_require_packages:
   - sassc
 
 themes_from_aur:
+  - whitesur-icon-theme-git
+  - whitesur-gtk-theme-git
+  - whitesur-cursor-theme-git
   - la-capitaine-icon-theme 
   - osx-el-capitan-theme-git 
   - capitaine-cursors
@@ -58,6 +61,7 @@ global_menu_aur:
 
 openbox_yay_packages:
   - polybar
+  - panther-launcher-git
   - cava
   - arc-icon-theme-git
   - brightnessctl
@@ -210,4 +214,5 @@ core_packages:
   - libreoffice-fresh
   - alsa-plugins
   - alsa-utils
+  - alsa-tools
   - nautilus
