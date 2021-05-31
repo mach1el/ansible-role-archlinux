@@ -6,6 +6,7 @@ install_fonts: true
 install_theme: true
 install_xfce: true
 install_global_menu: true
+install_yay_packages: true
 install_core_packages: true
 
 dotfiles_path: "{{ tmp_dir }}/dotfiles"
@@ -40,7 +41,7 @@ themes_require_packages:
   - gtk-engine-murrine 
   - gtk-engines 
   - sassc
-  - optipng 
+  - optipng
   - inkscape
 
 themes_from_aur:
@@ -50,6 +51,7 @@ themes_from_aur:
   - la-capitaine-icon-theme 
   - osx-el-capitan-theme-git 
   - capitaine-cursors
+  - mojave-gtk-theme-git
 
 xfconf_commands:
   - xfconf-query -c xsettings -p /Gtk/ShellShowsMenubar -n -t bool -s true
@@ -61,10 +63,9 @@ global_menu_pacman:
   - libdbusmenu-gtk2
 
 global_menu_aur:
-  - sublime-text-dev
-  - panther-launcher-git
+  - jayatana
   - appmenu-gtk-module-git
-  - vala-panel-appmenu-xfce-git
+  # - vala-panel-appmenu-xfce-git
   - vala-panel-appmenu-registrar-git
 
 font_packages:
@@ -86,13 +87,22 @@ font_packages:
   - otf-fira-mono
   - otf-font-awesome 
   - powerline-fonts 
-  - powerline 
+  - powerline
   - powerline-fonts 
   - python-powerline
 
+yay_packages:
+  - mugshot
+  - folder-color-nautilus
+  - sublime-text-dev
+  - panther-launcher-git
+  - nautilus-bluetooth
+  - sound-theme-smooth
+
 core_packages:
   - nautilus
-  - albert
+  - nautilus-terminal
+  - nautilus-sendto
   - tree
   - htop
   - git
@@ -187,4 +197,5 @@ core_packages:
   - powerline
   - libreoffice-fresh
   - alsa-utils
-  - alsa-tools
+  - opera
+  - gnome-calculator
