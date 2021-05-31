@@ -9,7 +9,12 @@
 
 - include_tasks: setup_yay.yml
   when: install_yay
-  
+
+- name: Archlinux | Install core packages.
+  command: yay -S {{ item }} --noconfirm
+  with_items: "{{ yay_packages }}"
+  when: install_yay_packages
+
 - include_tasks: setup_fonts.yml
   when: install_fonts
 
