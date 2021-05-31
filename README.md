@@ -17,9 +17,8 @@ Auto building,config my arch linux
 	└── templates
 
 ## Role Playbook
-	---
-	- name: Building archlinux for local server
-	  hosts: local_asterisk
-
-	  roles:
-	  	- '../ansible-role-archlinux'
+    ---
+    - name: Run role.
+      hosts: localhost
+      roles:
+        - 'ansible-role-archlinux'
