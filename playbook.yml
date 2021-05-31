@@ -1,0 +1,5 @@
+---
+- name: Run role.
+  hosts: localhost
+  roles:
+    - 'ansible-role-archlinux'
