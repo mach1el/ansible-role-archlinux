@@ -198,4 +198,5 @@ core_packages:
   - libreoffice-fresh
   - alsa-utils
   - opera
+  - opera-ffmpeg-codecs
   - gnome-calculator
